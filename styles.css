@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: charter, georgia, times, 'times new roman', serif;
+  font-family: charter, georgia, times, "times new roman", serif;
 }
 
 h1 {
@@ -25,7 +25,7 @@ h2 {
 h3 {
   font-family: "roboto slab", courier, "courier new", monospace;
   font-weight: 400;
-  font-size: .875rem;
+  font-size: 0.875rem;
 }
 
 nav ul {
@@ -45,9 +45,68 @@ nav a {
 /* RESPONSIVE IMAGES: put this in every stylesheet. =====  */
 img {
   max-width: 100%;
+  height: auto;
 }
 
-
 /* FOR THE DEMO =============== */
+.wrapper {
+  margin: 0 2% 1rem 2%;
+}
 
+section h2 {
+  text-align: center;
+}
 
+.home article {
+  border: 1px solid #aaa;
+  padding: 0.25rem;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  grid-gap: 2px;
+}
+
+nav a {
+  background-color: #ddd;
+  display: block;
+  padding: 0.5rem 2%;
+}
+
+/* LAYOUT */
+/* SECTION */
+/* HOME SECTION */
+section[class^="row-"] {
+  display: grid;
+  grid-gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.article-title {
+  font-weight: bold;
+}
+/* Forms ================= */
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  min-height: 6rem;
+}
+
+/* FOOTER ============= */
+footer {
+  text-align: center;
+}
