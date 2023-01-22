@@ -51,7 +51,7 @@ img {
 
 /* FOR THE DEMO =============== */
 .wrapper {
-  margin: 0 2% 1rem 2%;
+  padding: 0 2%;
 }
 
 section h2 {
@@ -118,6 +118,11 @@ footer {
 
 /* QUERIES ============== */
 @media screen and (min-width: 740px) {
+  .wrapper {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   nav ul {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -133,7 +138,23 @@ footer {
   section .guitar-small:nth-of-type(1) {
     grid-column: 1/-1;
   }
+
+  section.row-featured-contact {
+    margin: 0 auto;
+    max-width: 700px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
+  .wrapper {
+    max-width: 1200px;
+  }
+
+  section[class^="row-"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section .guitar-small:nth-of-type(1) {
+    grid-column: unset;
+  }
 }
