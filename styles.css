@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: charter, georgia, times, "times new roman", serif;
+  line-height: 1.4;
 }
 
 h1 {
@@ -84,6 +85,10 @@ section[class^="row-"] {
   margin-bottom: 2rem;
 }
 
+section.row-featured-contact {
+  display: block;
+}
+
 .article-title {
   font-weight: bold;
 }
@@ -109,4 +114,26 @@ textarea {
 /* FOOTER ============= */
 footer {
   text-align: center;
+}
+
+/* QUERIES ============== */
+@media screen and (min-width: 740px) {
+  nav ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section[class^="row-"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section h2 {
+    grid-column: 1/-1;
+  }
+
+  section .guitar-small:nth-of-type(1) {
+    grid-column: 1/-1;
+  }
+}
+
+@media screen and (min-width: 1000px) {
 }
