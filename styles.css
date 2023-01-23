@@ -133,6 +133,7 @@ footer {
 
   section h2 {
     grid-column: 1/-1;
+    text-align: unset;
   }
 
   section .guitar-small:nth-of-type(1) {
@@ -150,11 +151,23 @@ footer {
     max-width: 1200px;
   }
 
+  nav ul {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
   section[class^="row-"] {
     grid-template-columns: repeat(3, 1fr);
   }
 
   section .guitar-small:nth-of-type(1) {
     grid-column: unset;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  section.row-featured-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: unset;
   }
 }
